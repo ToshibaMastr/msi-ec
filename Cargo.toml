@@ -1,0 +1,14 @@
+[workspace]
+resolver = "3"
+members = ["msi-ec", "msi-ec-types", "msi-ec-client"]
+default-members = ["msi-ec"]
+
+[workspace.package]
+edition = "2024"
+
+[workspace.dependencies]
+msi-ec-types = { path = "msi-ec-types" }
+msi-ec-client = { path = "msi-ec-client" }
+
+zbus = "5.10.0"
+serde = { version = "1.0.219", features = ["derive"] }

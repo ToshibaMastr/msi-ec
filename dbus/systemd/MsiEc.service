@@ -1,0 +1,13 @@
+[Unit]
+Description=MSI Embedded Controller D-Bus Service
+After=dbus.service
+
+[Service]
+Type=dbus
+BusName=by.toshibam.MsiEc
+ExecStart=/usr/bin/msi-ec
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
