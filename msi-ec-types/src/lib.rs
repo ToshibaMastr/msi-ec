@@ -1,14 +1,14 @@
 use serde::{Deserialize, Serialize};
-use zbus::zvariant::Type;
+use zbus::zvariant::{Type, Value};
 
-#[derive(Deserialize, Serialize, Type, Debug, Clone, PartialEq)]
+#[derive(Deserialize, Serialize, Type, Value, Debug, Clone, PartialEq)]
 #[serde(rename_all = "snake_case")]
 pub enum OnOff {
     Off,
     On,
 }
 
-#[derive(Deserialize, Serialize, Type, Debug, Clone, PartialEq)]
+#[derive(Deserialize, Serialize, Type, Value, Debug, Clone, PartialEq)]
 #[serde(rename_all = "snake_case")]
 pub enum FanMode {
     Auto,
@@ -17,7 +17,7 @@ pub enum FanMode {
     Advanced,
 }
 
-#[derive(Deserialize, Serialize, Type, Debug, Clone, PartialEq)]
+#[derive(Deserialize, Serialize, Type, Value, Debug, Clone, PartialEq)]
 #[serde(rename_all = "snake_case")]
 pub enum ShiftMode {
     Eco,
