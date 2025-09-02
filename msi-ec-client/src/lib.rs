@@ -6,7 +6,7 @@ use zbus::{Result, proxy};
     default_service = "by.toshibam.MsiEc",
     default_path = "/by/toshibam/MsiEc"
 )]
-trait MsiEc {
+pub trait MsiEc {
     //. fan_mode
 
     #[zbus(property)]
