@@ -7,7 +7,7 @@ edition = "2024"
 serde = { workspace = true, optional = true }
 zbus = { workspace = true, optional = true }
 
-strum = { version = "0.27.2", optional = true }
+strum = { version = "0.27.2", features = ["derive"], optional = true }
 
 [features]
 default = []
