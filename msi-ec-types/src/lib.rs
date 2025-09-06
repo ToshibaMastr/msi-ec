@@ -6,7 +6,7 @@ use strum::{Display, EnumString};
 #[cfg(feature = "zbus")]
 use zbus::zvariant::{OwnedValue, Type, Value};
 
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, Copy, PartialEq)]
 #[cfg_attr(feature = "zbus", derive(Value, Type, OwnedValue))]
 #[cfg_attr(feature = "strum", derive(Display, EnumString))]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
@@ -16,7 +16,7 @@ pub enum OnOff {
     On,
 }
 
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, Copy, PartialEq)]
 #[cfg_attr(feature = "zbus", derive(Value, Type, OwnedValue))]
 #[cfg_attr(feature = "strum", derive(Display, EnumString))]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
@@ -28,7 +28,7 @@ pub enum FanMode {
     Advanced,
 }
 
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, Copy, PartialEq)]
 #[cfg_attr(feature = "zbus", derive(Value, Type, OwnedValue))]
 #[cfg_attr(feature = "strum", derive(Display, EnumString))]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
