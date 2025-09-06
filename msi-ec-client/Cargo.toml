@@ -4,9 +4,10 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-msi-ec-types.workspace = true
 serde.workspace = true
 zbus.workspace = true
+
+msi-ec-types = { workspace = true, features = ["zbus"] }
 
 anyhow = "1.0.99"
 tokio = { version = "1.47.1", features = ["rt-multi-thread", "macros", "fs"] }
